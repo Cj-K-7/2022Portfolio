@@ -1,21 +1,22 @@
 import "./style/Global.tsx";
 import styled from "styled-components";
+import Layer from "./components/Layer/Layer";
 import Clock from "./components/Clock/Clock";
 
 const Container = styled.div`
-  width: 100%;
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  justify-content: center;
 `;
 
-function App() {
 
+function App() {
   return (
     <Container>
-      <Clock/>
-
+      <Layer/>
     </Container>
   );
 }

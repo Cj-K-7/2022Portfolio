@@ -7,11 +7,12 @@ export const ClockFrame = styled.div<{ img: string }>`
   justify-content: center;
   align-items: center;
   background: ${(props) => `url(${props.img})`};
+  background-color: ${props=> props.theme.white};
   background-size: cover;
   border: 3.5px solid ${(props) => props.theme.white};
   border-radius: 50%;
-  box-shadow: 0 10px 10px rgba(30, 30, 30, 0.1),
-    inset 0 8px 10px rgba(30, 30, 30, 0.1);
+  box-shadow: 0 8px 10px rgba(30, 30, 30, 0.5),
+    inset 0 8px 10px rgba(30, 30, 30, 0.35);
   &::before {
     content: "";
     width: 10px;

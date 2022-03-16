@@ -27,6 +27,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+	width: 100vw;
+	overflow-x: hidden;
     background-color: ${props=>props.theme.white};
     font-size: 1em;
 	line-height: 1;
