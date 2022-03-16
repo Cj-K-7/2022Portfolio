@@ -19,7 +19,7 @@ export const ClockFrame = styled.div<{ img: string }>`
     height: 10px;
     background-color: black;
     border-radius: 50%;
-    z-index: 10;
+    z-index: 1;
   }
 `;
 export const Hour = styled.div`

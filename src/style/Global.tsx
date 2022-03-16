@@ -28,6 +28,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	width: 100vw;
+	min-width: 1200px;
 	overflow-x: hidden;
     background-color: ${props=>props.theme.white};
     font-size: 1em;

@@ -17,6 +17,7 @@ function App() {
   return (
     <Container>
       <Layer/>
+      <Clock/>
     </Container>
   );
 }
