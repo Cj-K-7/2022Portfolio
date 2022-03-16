@@ -10,12 +10,12 @@ const Container = styled.div`
   min-height: 100vh;
 `;
 
-
 function App() {
 
   return (
     <Container>
       <Clock/>
+
     </Container>
   );
 }
