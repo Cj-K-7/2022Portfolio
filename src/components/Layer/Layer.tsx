@@ -18,35 +18,44 @@ const Section = styled.section`
     bottom: 0;
     left: 50%;
     width: 100%;
-    height: 100vh;
+    height: 100%;
   }
 `;
 
 const LayerPart = styled.div<{
-  skeW: number;
+  skew: number;
   color: string;
-  z: number;
   x: number;
 }>`
-  box-shadow: -10px 0px 10px rgba(30,30,30,0.5);
+  box-shadow: -10px 0px 10px rgba(30, 30, 30, 0.5);
   ${(props) =>
     `background-color: ${props.color};
-   transform: skewX(${props.skeW}deg) translateX(${props.x}px);
-    z-index: ${props.z};`}
+   transform: skewX(${props.skew}deg) translateX(${props.x}px);
+`}
 `;
 
 function Layer() {
   const degree = 45;
+  const array = [
+    theme.red,
+    theme.sky,
+    theme.white,
+    theme.red,
+    theme.sky,
+    theme.white,
+    theme.black,
+    theme.black,
+  ];
   return (
     <Position>
       <Section>
-        <LayerPart skeW={degree} color={theme.black} z={-10} x={700} />
-        <LayerPart skeW={-degree} color={theme.white} z={-11} x={400} />
-        <LayerPart skeW={-degree} color={theme.blue} z={-13} x={300} />
-        <LayerPart skeW={-degree} color={theme.sky} z={-15} x={200} />
-        <LayerPart skeW={degree} color={theme.sky} z={-12} x={600} />
-        <LayerPart skeW={degree} color={theme.white} z={-14} x={500} />
-        <LayerPart skeW={degree} color={theme.blue} z={-16} x={400} />
+        {array.map((color, index) =>
+          <LayerPart
+            skew={(index+1) % 2 === 1 ? degree : -degree}
+            color={color}
+            x={(index+1) % 2 === 1 ? (index+1) * 50+300 : (index+1) * 50+500}
+          />
+        )}
       </Section>
     </Position>
   );
