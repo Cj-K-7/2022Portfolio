@@ -6,6 +6,8 @@ declare module 'styled-components'{
         sky : string;
         blue : string;
         red : string;
+        yellow :string;
+        orange :string;
         black : string;
         text : string;
         hover : string;

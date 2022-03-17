@@ -6,7 +6,7 @@ const SVG = styled.svg`
   height: 100%;
   fill: none;
   stroke-width: 8;
-  stroke: ${props=> props.theme.blue};
+  stroke: ${props=> props.theme.black};
   opacity: 0.3;
  }
  & circle:nth-child(2){
