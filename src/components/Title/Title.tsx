@@ -6,9 +6,9 @@ const TitleBox = styled.div`
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: 5em;
+  font-size: 6em;
   font-weight: 600;
-  letter-spacing: 3px;
+  letter-spacing: 8px;
   color: ${(props) => props.theme.white};
   transition: 0.8s;
   span{
@@ -16,19 +16,20 @@ const TitleBox = styled.div`
   }
   &:hover{
     span:first-child{
-        margin-right: 20px;
+        margin-right: 28px;
     }
     span:first-child:after{
         position: absolute;
         content: "'";
     }
     span:nth-child(3){
-        margin-left: 34px;
-        text-shadow: 0 0 5px #fff,
-        0 0 10px #fff,
-        0 0 20px #fff,
-        0 0 40px #fff,
-        0 0 80px #fff;
+        margin-left: 56px;
+        color : white;
+        text-shadow: 0 0 4px #fff,
+        0 0 12px #fff,
+        0 0 32px #fff,
+        0 0 64px #fff,
+        0 0 128px #fff;
     }
   }
 `;

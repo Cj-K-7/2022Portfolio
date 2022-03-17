@@ -5,16 +5,15 @@ import { Github, Mail } from "../SVGs/Icons";
 
 const Div = styled(motion.div)`
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   & a {
     font-size: 1.3em;
     font-weight: 600;
     display: flex;
     align-items: center;
     cursor: pointer;
-    margin: 20px 30px;
+    margin: 10px 30px;
   }
   & a:hover {
     color: ${(props) => props.theme.red};

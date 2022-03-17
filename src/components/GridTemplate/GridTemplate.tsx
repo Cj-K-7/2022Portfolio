@@ -9,20 +9,12 @@ const Box = styled.div`
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-columns: 75vw 25vw;
+  grid-template-columns: 65vw 35vw;
   grid-template-rows: 30vh 50vh 20vh;
   transition: 0.96s ease-in-out;
   & div:first-child {
     grid-column: 1;
     grid-row: 1 / 3;
-  }
-  & div:nth-child(3) {
-    grid-row: 2 / 4;
-  }
-  & h1 {
-    font-size: 1.1em;
-    font-weight: 600;
-    margin: 6px;
   }
 `;
 
@@ -40,14 +32,16 @@ function GridTemplate({ refer }: IGridProps) {
   return (
     <Box ref={refer}>
       <GridBox>
-        <History />
       </GridBox>
       <GridBox>
-        <Contacts />
+      <History />
       </GridBox>
-      <GridBox>about me</GridBox>
+      <GridBox></GridBox>
       <GridBox>
         <Stacks />
+      </GridBox>
+      <GridBox>
+      <Contacts />
       </GridBox>
     </Box>
   );

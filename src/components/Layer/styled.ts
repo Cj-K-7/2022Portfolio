@@ -82,6 +82,6 @@ export const LayerPart = styled.div<{
   h1 {
     font-size: 5em;
     font-weight: 600;
-    text-shadow: 2px 2px 4px rgba(30, 30, 30, 0.3);
+    text-shadow: 3px 3px 5px rgba(30, 30, 30, 0.4);
   }
 `;

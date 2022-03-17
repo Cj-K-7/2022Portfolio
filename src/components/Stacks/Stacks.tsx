@@ -24,6 +24,7 @@ const parent = {
       delay : 2,
       delayChildren: 2.5,
       staggerChildren: 0.5,
+      duration : 0.8
     },
   },
 };

@@ -27,10 +27,11 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+	font-family: 'Fredoka', sans-serif;
 	width: 100vw;
 	min-width: 1200px;
 	overflow-x: hidden;
-    background-color: ${props=>props.theme.white};
+    background-color: ${(props) => props.theme.white};
     font-size: 1em;
 	line-height: 1;
 }
@@ -55,6 +56,6 @@ a{
 a:visited {
     color : inherit;
 }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;
