@@ -6,9 +6,8 @@ import { Github, Mail } from "../SVGs/Icons";
 const Div = styled(motion.div)`
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   & a {
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -23,6 +22,10 @@ const Div = styled(motion.div)`
   }
   & svg {
     margin: 0px 20px;
+  }
+  @media (max-width : 1200px) {
+    flex-direction: column;
+    justify-content: center;
   }
 `;
 
@@ -48,7 +51,7 @@ const child = {
 };
 
 function Contacts() {
-  const svgSize = 75;
+  const svgSize = 60;
   return (
     <Div variants={parent} initial="hidden" animate="visible">
       <motion.a

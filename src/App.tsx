@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Layer from "./components/Layer/Layer";
 import Title from "./components/Title/Title";
-import GridTemplate from "./components/GridTemplate/GridTemplate";
+import Templates from "./components/Templates/Templates";
 import { useEffect, useRef, useState } from "react";
 import { theme } from "./style/them";
 
@@ -10,7 +10,6 @@ const Container = styled.div`
   max-width: 100vw;
   height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
   background-color: ${(props) => props.theme.black};
   transition: 0.8s;
@@ -28,7 +27,7 @@ function App() {
     setTimeout(() => {
       currentTarget.style.display = "none";
     }, 800);
-    setClicked(true);
+    setTimeout(()=>setClicked(true),1000);
     // setTimeout(() => {
     //   if (history.current) history.current.style.zIndex = `0`;
     // }, 1200);
@@ -40,7 +39,7 @@ function App() {
 
   return (
     <Container ref={container}>
-      {isTitleClicked? <GridTemplate refer={history} /> : null}
+      {isTitleClicked? <Templates refer={history} /> : null}
       <Title onClick={FadeAndLightUp} />
       {/* <Layer /> */}
     </Container>

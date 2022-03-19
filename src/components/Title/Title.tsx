@@ -8,6 +8,9 @@ const TitleBox = styled.div`
   user-select: none;
   font-size: 6em;
   font-weight: 600;
+  height: 100vh;
+  display: flex;
+  align-items: center;
   letter-spacing: 8px;
   color: ${(props) => props.theme.white};
   transition: 0.8s;

@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	font-family: 'Fredoka', sans-serif;
 	width: 100vw;
-	min-width: 1200px;
+	min-width: 500px;
 	overflow-x: hidden;
     background-color: ${(props) => props.theme.white};
     font-size: 1em;

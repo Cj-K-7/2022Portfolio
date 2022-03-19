@@ -8,23 +8,32 @@ import ts from "../../images/ts.png";
 import styledpng from "../../images/styled.png";
 import motionpng from "../../images/motion.png";
 
-const images = [css, html, js, ts, reactIcon, styledpng, motionpng];
+const images = [html, css, js, ts, reactIcon, styledpng, motionpng];
 const Div = styled(motion.div)`
-  width: 90%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 120px));
+  align-items: center;
+  & h1 {
+    width: 50px;
+    margin: 0px 5px;
+    text-align: center;
+  }
 `;
+
 const Image = styled(motion.img)`
-  padding: 15px 20px;
+  padding: 15px 5px;
 `;
 
 const parent = {
-  hidden: { opacity : 0 },
+  hidden: { opacity: 0 },
   visible: {
-    opacity:1,
+    opacity: 1,
     transition: {
-      delay : 2,
-      delayChildren: 2.5,
+      delay: 1,
+      delayChildren: 0.5,
       staggerChildren: 0.5,
-      duration : 0.8
+      duration: 0.8,
     },
   },
 };
@@ -38,10 +47,10 @@ const child = {
 };
 
 function Stacks() {
-  const size = 80;
+  const size = 50;
   return (
     <Div variants={parent} initial="hidden" animate="visible">
-      <h1>This Page made by using </h1>
+      <h1> made by using </h1>
       {images.map((image) => (
         <Image variants={child} width={size} src={image} />
       ))}
