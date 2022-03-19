@@ -41,7 +41,7 @@ function App() {
     <Container ref={container}>
       {isTitleClicked? <Templates refer={history} /> : null}
       <Title onClick={FadeAndLightUp} />
-      {/* <Layer /> */}
+      <Layer />
     </Container>
   );
 }
