@@ -82,7 +82,7 @@ function Templates({ refer }: IGridProps) {
         <Menu href="#projects">MY PROJECTS</Menu>
         <Contacts />
       </SideBar>
-      <BG />
+      <BG/>
       {render}
       <Projects />
     </Box>

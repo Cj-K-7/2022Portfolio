@@ -27,7 +27,7 @@ function App() {
     setTimeout(() => {
       currentTarget.style.display = "none";
     }, 800);
-    setTimeout(()=>setClicked(true),1000);
+    setTimeout(()=>setClicked(true),800);
     // setTimeout(() => {
     //   if (history.current) history.current.style.zIndex = `0`;
     // }, 1200);

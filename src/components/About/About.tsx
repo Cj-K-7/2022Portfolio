@@ -48,8 +48,8 @@ const parent = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 0.2,
-      delayChildren: 0.3,
+      delay: 1,
+      delayChildren: 1.3,
       staggerChildren: 0.5,
     },
   },
