@@ -22,12 +22,12 @@ const colors = [
 const images = [next, reactIcon, ts, js, css, html, null];
 
 const description = [
-  "",
-  "Be Programmer",
-  "",
-  "Absolutely",
-  "",
-  "Begin with...",
+  "FRONTIER",
+  "Evolution",
+  "Advance",
+  "Absolution",
+  "Beuty",
+  "Begins",
   "2022 PORTFOLIO",
 ];
 
@@ -55,7 +55,7 @@ function Layer() {
           skew={degree}
           color={theme.sky}
           x={-600}
-        ><h1>Wellcom to My World</h1></LayerPart>
+        ><h1>Hello. WORLD</h1></LayerPart>
         {array.map((item, index) => (
           <LayerPart
             onClick={onClick}

@@ -60,13 +60,9 @@ const Project = styled(motion.div)`
   & h2:hover{
     color : ${props=>props.theme.orange};
     cursor: pointer;
+    text-shadow: 0px 0px 10px ${props=>props.theme.orange};
   }
 `;
-
-
-const Image = styled(motion.img)`
-  padding: 15px 5px;
-  `;
 
 const parent = {
   hidden: {  },
@@ -133,7 +129,7 @@ function Projects() {
     <Box id="projects">
       <Preview key={count} img={imgArr[count]} />
       <List variants={parent} initial="hidden" animate="visible">
-        <h1>My own Projects</h1>
+        <h1>My Projects</h1>
         {proArr.map((a, i) => (
           <Project key={i} variants={child} onHoverStart={() => onMouseHover(i)}>
             <h2>{a}</h2>
