@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.js": "/2022Portfolio/static/js/main.11c3042a.js",
+    "main.js": "/2022Portfolio/static/js/main.ce70af3e.js",
     "static/media/nflix.png": "/2022Portfolio/static/media/nflix.6e200f8c5e4a0133fc10.png",
     "static/media/IU.png": "/2022Portfolio/static/media/IU.88326635cbaaa83cb28b.png",
     "static/media/LCK.png": "/2022Portfolio/static/media/LCK.145a32d27cfd91c8d1d7.png",
     "static/media/nflix2.png": "/2022Portfolio/static/media/nflix2.8d8f0b3ea1f7282e4d48.png",
     "static/media/LCK2.png": "/2022Portfolio/static/media/LCK2.6267e9bbabab62b5e206.png",
+    "static/media/me.jpg": "/2022Portfolio/static/media/me.43d8f717bac5e98b2a8b.jpg",
     "static/media/weather2.png": "/2022Portfolio/static/media/weather2.9331890383bfb1878fe8.png",
-    "static/media/weather.png": "/2022Portfolio/static/media/weather.09bb61fa33d0414c6076.png",
     "static/media/html.png": "/2022Portfolio/static/media/html.3c38b98446049b35fc55.png",
+    "static/media/weather.png": "/2022Portfolio/static/media/weather.9246d6730108e1855db3.png",
     "static/media/css.png": "/2022Portfolio/static/media/css.33e2cb9dc28f0b432651.png",
     "static/media/ts.png": "/2022Portfolio/static/media/ts.17936c69824e11a996c4.png",
     "static/media/js.png": "/2022Portfolio/static/media/js.75220e22aacfddc29275.png",
     "static/media/next.png": "/2022Portfolio/static/media/next.6db19b31cc0a2f63cff4.png",
     "index.html": "/2022Portfolio/index.html",
-    "main.11c3042a.js.map": "/2022Portfolio/static/js/main.11c3042a.js.map"
+    "main.ce70af3e.js.map": "/2022Portfolio/static/js/main.ce70af3e.js.map"
   },
   "entrypoints": [
-    "static/js/main.11c3042a.js"
+    "static/js/main.ce70af3e.js"
   ]
 }
