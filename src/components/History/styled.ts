@@ -20,7 +20,6 @@ export const Title = styled(motion.div)`
   font-family: "Noto Sans KR", Arial, Helvetica, sans-serif;
 `;
 export const Div = styled(motion.div)`
-  margin-top: 60px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -47,7 +47,7 @@ export const LayerPart = styled.div<{
       width: 100%;
       height: 0px;
       background-color: white;
-      animation: 0.33s bling 0.8s linear;
+      animation: 0.2s bling 0.2s linear;
       z-index: 1;
       @keyframes bling {
         0% {
@@ -56,7 +56,7 @@ export const LayerPart = styled.div<{
           box-shadow: 0px 0px 10px 5px white;
         }
         50% {
-          height: 20px;
+          height: 60px;
           transform: translateY(-50vh);
           box-shadow: 0px 0px 60px 20px white;
         }

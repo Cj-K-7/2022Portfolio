@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const ClockFrame = styled.div<{ img: string }>`
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,34 +23,34 @@ export const ClockFrame = styled.div<{ img: string }>`
   }
 `;
 export const Hour = styled.div`
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   position: absolute;
 `;
 export const Hr = styled.div<{ hour: number; min: number }>`
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   display: flex;
   justify-content: center;
   ${(props) => `transform: rotateZ(${props.hour + props.min / 12}deg);`}
   &::before {
     content: "";
     position: absolute;
-    width: 6px;
-    height: 40px;
+    width: 5px;
+    height: 30px;
     background-color: ${(props) => props.theme.black};
     border-radius: 3px 3px 0 0;
   }
 `;
 
 export const Min = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   position: absolute;
 `;
 export const Mn = styled.div<{ min: number }>`
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   display: flex;
   justify-content: center;
   ${(props) => `transform: rotateZ(${props.min}deg);`}
@@ -58,19 +58,19 @@ export const Mn = styled.div<{ min: number }>`
     content: "";
     position: absolute;
     width: 4px;
-    height: 50px;
+    height: 40px;
     background-color: ${(props) => props.theme.blue};
     border-radius: 3px 3px 0 0;
   }
 `;
 export const Sec = styled.div`
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   position: absolute;
 `;
 export const Sc = styled.div<{ sec: number }>`
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   display: flex;
   justify-content: center;
   ${(props) => `transform: rotateZ(${props.sec}deg);`}
@@ -78,7 +78,7 @@ export const Sc = styled.div<{ sec: number }>`
     content: "";
     position: absolute;
     width: 2px;
-    height: 70px;
+    height: 60px;
     background-color: ${(props) => props.theme.red};
     border-radius: 3px 3px 0 0;
   }

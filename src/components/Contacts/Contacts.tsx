@@ -5,9 +5,10 @@ import { Github, Mail } from "../SVGs/Icons";
 
 const Div = styled(motion.div)`
   display: flex;
+  flex-direction: column;
   align-items: center;
   & a {
-    font-size: 1.2em;
+    font-size: 20px;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -15,9 +16,9 @@ const Div = styled(motion.div)`
     margin: 10px 30px;
   }
   & a:hover {
-    color: ${(props) => props.theme.red};
+    color: ${(props) => props.theme.sky};
     path {
-      fill: ${(props) => props.theme.red};
+      fill: ${(props) => props.theme.blue};
     }
   }
   & svg {
@@ -59,7 +60,7 @@ function Contacts() {
         href="https://github.com/Cj-K-7"
         target="_blank"
       >
-        <Github width={svgSize} height={svgSize} fill={theme.black} />
+        <Github width={svgSize} height={svgSize} fill={theme.white} />
         github.com/Cj-K-7
       </motion.a>
       <motion.a
@@ -69,7 +70,7 @@ function Contacts() {
           alert("E-mail address copied!");
         }}
       >
-        <Mail width={svgSize} height={svgSize} fill={theme.black} />
+        <Mail width={svgSize} height={svgSize} fill={theme.white} />
         kllt7059@gmail.com
       </motion.a>
     </Div>

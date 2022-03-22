@@ -22,11 +22,11 @@ const colors = [
 const images = [next, reactIcon, ts, js, css, html, null];
 
 const description = [
-  "Next Challenge will be...",
-  "To Be Programmer",
-  "Fun & Powerful",
+  "",
+  "Be Programmer",
+  "",
   "Absolutely",
-  "Of cource it's been",
+  "",
   "Begin with...",
   "2022 PORTFOLIO",
 ];

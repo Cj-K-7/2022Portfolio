@@ -1,5 +1,3 @@
-import { useAnimation, useViewportScroll } from "framer-motion";
-import { useEffect } from "react";
 import { Box, Div, Left, Li, Pr, Right, Sb, Title } from "./styled";
 
 const history = [
@@ -34,8 +32,8 @@ const parent = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 1,
-      delayChildren: 1,
+      delay: 0.2,
+      delayChildren: 0.3,
       staggerChildren: 0.5,
     },
   },
@@ -50,10 +48,8 @@ const child = {
 };
 
 function History() {
-  const { scrollY } = useViewportScroll();
-  useEffect(()=>{},[])
   return (
-    <Box>
+    <Box id="Career">
         <>
           <Title variants={parent} initial={{opacity: 0}} animate="visible">
             지나온 경력 <br />

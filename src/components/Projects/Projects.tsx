@@ -13,8 +13,7 @@ const Box = styled.div`
   align-self: center;
   height: 100vh;
   display: grid;
-  grid-template-columns: 75vw 25vw;
-  grid-template-rows: 1fr 150px;
+  grid-template-columns: 70vw 30vw;
   @media (max-width: 1200px) {
     grid-template-columns: 100vw;
     grid-template-rows: 80vw 20vw;
@@ -43,7 +42,7 @@ const List = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  margin: 30px 0px;
   & h1 {
     font-size: 3.2em;
     font-weight: 600;
@@ -52,22 +51,22 @@ const List = styled(motion.div)`
   }
 `;
 const Project = styled(motion.div)`
+  margin: 16px;
   font-size: 2em;
   font-weight: 500;
-  padding: 20px 0px;
+  transition: 0.9s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  & h2:hover{
+    color : ${props=>props.theme.orange};
+    cursor: pointer;
+  }
 `;
 
-const imgArr = [LCK, LCK2, IU, Weather, Weather2, nflix, nflix2];
-const proArr = [
-  "LCK E-sports",
-  "IU Album Grid Design",
-  "City's Weather Search",
-  "Netflix Clone Coding",
-];
 
 const Image = styled(motion.img)`
   padding: 15px 5px;
-`;
+  `;
 
 const parent = {
   hidden: {  },
@@ -89,10 +88,18 @@ const child = {
   },
 };
 
+const imgArr = [LCK, LCK2, IU, Weather, Weather2, nflix, nflix2];
+const proArr = [
+  "LCK E-sports",
+  "IU Album Grid Design",
+  "City's Weather Search",
+  "Netflix Clone Coding",
+];
+
 function Projects() {
   const [count, setCount] = useState(0);
   const savedCallBack = useRef(setCount);
-  const onClick = (e: number) => {
+  const onMouseHover = (e: number) => {
     let i = 0;
     switch (e) {
       case 0:
@@ -118,17 +125,18 @@ function Projects() {
     const tic = () => {
       savedCallBack.current((pre) => (pre > 5 ? 0 : pre + 1));
     };
-    const timer = setInterval(tic, 4500);
+    const timer = setInterval(tic, 3000);
     return () => clearInterval(timer);
   }, [setCount]);
 
   return (
-    <Box>
+    <Box id="projects">
       <Preview key={count} img={imgArr[count]} />
       <List variants={parent} initial="hidden" animate="visible">
+        <h1>My own Projects</h1>
         {proArr.map((a, i) => (
-          <Project key={i} variants={child} onClick={() => onClick(i)}>
-            {a}
+          <Project key={i} variants={child} onHoverStart={() => onMouseHover(i)}>
+            <h2>{a}</h2>
           </Project>
         ))}
       </List>
