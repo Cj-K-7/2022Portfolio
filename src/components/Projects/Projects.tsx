@@ -57,15 +57,15 @@ const Project = styled(motion.div)`
   transition: 0.9s;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
-  & h2:hover{
-    color : ${props=>props.theme.orange};
+  & h2:hover {
+    color: ${(props) => props.theme.orange};
     cursor: pointer;
-    text-shadow: 0px 0px 10px ${props=>props.theme.orange};
+    text-shadow: 0px 0px 10px ${(props) => props.theme.orange};
   }
 `;
 
 const parent = {
-  hidden: {  },
+  hidden: {},
   visible: {
     transition: {
       delay: 1,
@@ -84,13 +84,19 @@ const child = {
   },
 };
 
-const imgArr = [LCK, LCK2, IU, Weather, Weather2, nflix, nflix2];
 const proArr = [
   "LCK E-sports",
   "IU Album Grid Design",
   "City's Weather Search",
   "Netflix Clone Coding",
 ];
+const linkArr = [
+  "https://github.com/Cj-K-7/LCKrecords",
+  "https://github.com/Cj-K-7/IUshoppingtheme",
+  "https://github.com/Cj-K-7/weatherSE",
+  "https://github.com/Cj-K-7/XFLIX",
+];
+const imgArr = [LCK, LCK2, IU, Weather, Weather2, nflix, nflix2];
 
 function Projects() {
   const [count, setCount] = useState(0);
@@ -130,9 +136,15 @@ function Projects() {
       <Preview key={count} img={imgArr[count]} />
       <List variants={parent} initial="hidden" animate="visible">
         <h1>My Projects</h1>
-        {proArr.map((a, i) => (
-          <Project key={i} variants={child} onHoverStart={() => onMouseHover(i)}>
-            <h2>{a}</h2>
+        {proArr.map((project, i) => (
+          <Project
+            key={i}
+            variants={child}
+            onHoverStart={() => onMouseHover(i)}
+          >
+            <a href={linkArr[i]}>
+              <h2>{project}</h2>
+            </a>
           </Project>
         ))}
       </List>

@@ -33,9 +33,9 @@ function App() {
     // }, 1200);
   };
 
-  // useEffect(()=>{
-  //   alert("웹으로 보시기를 권장합니다.\nRecommend. visit through WebBrowsers")
-  // },[])
+  useEffect(()=>{
+    alert("웹으로 보시기를 권장합니다.\nRecommend. visit through WebBrowsers")
+  },[])
 
   return (
     <Container ref={container}>
