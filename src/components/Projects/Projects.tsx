@@ -91,10 +91,10 @@ const proArr = [
   "Netflix Clone Coding",
 ];
 const linkArr = [
-  "https://github.com/Cj-K-7/LCKrecords",
-  "https://github.com/Cj-K-7/IUshoppingtheme",
+  "https://cj-k-7.github.io/LCKrecords/",
+  "https://iu-shoppingtheme-qjev4oyp9-cj-k-7.vercel.app/",
   "https://github.com/Cj-K-7/weatherSE",
-  "https://github.com/Cj-K-7/XFLIX",
+  "https://cj-k-7.github.io/XFLIX/",
 ];
 const imgArr = [LCK, LCK2, IU, Weather, Weather2, nflix, nflix2];
 
@@ -133,7 +133,7 @@ function Projects() {
 
   return (
     <Box id="projects">
-      <Preview key={count} img={imgArr[count]} />
+      <Preview key={count} img={imgArr[count]}/>
       <List variants={parent} initial="hidden" animate="visible">
         <h1>My Projects</h1>
         {proArr.map((project, i) => (
@@ -142,7 +142,7 @@ function Projects() {
             variants={child}
             onHoverStart={() => onMouseHover(i)}
           >
-            <a href={linkArr[i]}>
+            <a href={linkArr[i]}  target='_blank'>
               <h2>{project}</h2>
             </a>
           </Project>
