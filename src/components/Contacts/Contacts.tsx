@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { type } from "os";
 import styled from "styled-components";
 import { theme } from "../../style/them";
 import { Github, Mail } from "../SVGs/Icons";
@@ -53,6 +54,15 @@ const child = {
 
 function Contacts() {
   const svgSize = 60;
+
+  const download = () =>{
+    const download_anchor = document.createElement('a');
+    const download_object = new Blob(['this is target'], {type : 'text/plain'})
+    download_anchor.href = URL.createObjectURL(download_object);
+    download_anchor.download = 'filename.txt';
+    download_anchor.click();
+  }
+
   return (
     <Div variants={parent} initial="hidden" animate="visible">
       <motion.a
