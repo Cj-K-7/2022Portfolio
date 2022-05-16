@@ -4,6 +4,7 @@ import Title from "./components/Title/Title";
 import Templates from "./components/Templates/Templates";
 import { useEffect, useRef, useState } from "react";
 import { theme } from "./style/them";
+import Menu from "./components/Button/Menu";
 
 const Container = styled.div`
   width: 100vw;
@@ -39,9 +40,10 @@ function App() {
 
   return (
     <Container ref={container}>
-      {isTitleClicked? <Templates refer={history} /> : null}
+      {/* {isTitleClicked? <Templates refer={history} /> : null}
       <Title onClick={FadeAndLightUp} />
-      <Layer />
+      <Layer /> */}
+      <Menu/>
     </Container>
   );
 }
