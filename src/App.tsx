@@ -4,7 +4,6 @@ import Title from "./components/Title/Title";
 import Templates from "./components/Templates/Templates";
 import { useEffect, useRef, useState } from "react";
 import { theme } from "./style/them";
-import Menu from "./components/Button/Menu";
 
 const Container = styled.div`
   width: 100vw;
@@ -17,7 +16,7 @@ const Container = styled.div`
 `;
 
 function App() {
-  const [isTitleClicked, setClicked] = useState(false)
+  const [isTitleClicked, setClicked] = useState(false);
   const container = useRef<HTMLDivElement>(null);
   const history = useRef<HTMLDivElement>(null);
   const FadeAndLightUp = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -28,22 +27,21 @@ function App() {
     setTimeout(() => {
       currentTarget.style.display = "none";
     }, 800);
-    setTimeout(()=>setClicked(true),800);
+    setTimeout(() => setClicked(true), 800);
     // setTimeout(() => {
     //   if (history.current) history.current.style.zIndex = `0`;
     // }, 1200);
   };
 
-  useEffect(()=>{
-    alert("웹으로 보시기를 권장합니다.\nRecommend. visit through WebBrowsers")
-  },[])
+  useEffect(() => {
+    alert("웹으로 보시기를 권장합니다.\nRecommend. visit through WebBrowsers");
+  }, []);
 
   return (
     <Container ref={container}>
-      {/* {isTitleClicked? <Templates refer={history} /> : null}
+      {isTitleClicked? <Templates refer={history} /> : null}
       <Title onClick={FadeAndLightUp} />
-      <Layer /> */}
-      <Menu/>
+      <Layer />
     </Container>
   );
 }

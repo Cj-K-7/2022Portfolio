@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import pagecontent from "../../pagecontent.json";
 import { theme } from "../../style/them";
 import reactIcon from "../../images/react.png";
 import css from "../../images/css.png";
@@ -21,21 +22,8 @@ const colors = [
 ];
 const images = [next, reactIcon, ts, js, css, html, null];
 
-const description = [
-  "FRONTIER",
-  "Evolution",
-  "Advance",
-  "Absolution",
-  "Beuty",
-  "Begins",
-  "2022 PORTFOLIO",
-];
-
-const array = colors.map((color, index) => {
-  return { color, icon: images[index], description: description[index] };
-});
-
 function Layer() {
+  const [description, setDescription] = useState<string[]>([]);
   const ref = useRef<HTMLDivElement>(null);
   const onClick = (event: React.MouseEvent<HTMLDivElement>) => {
     const { currentTarget } = event;
@@ -46,6 +34,19 @@ function Layer() {
     currentTarget.style.transform = "translateX(1000vw)";
     if (ref.current) ref.current.style.transform = "translateX(1000vw)";
   };
+  useEffect(() => {
+    if (process.env.NODE_ENV === "development") {
+      setDescription(pagecontent.description);
+    } else {
+      fetch("pagecontent.json").then((res) => {
+        res.json().then((json) => setDescription(json.description));
+      });
+    }
+  }, []);
+  const array = colors.map((color, index) => {
+    return { color, icon: images[index], description: description[index] };
+  });
+
   return (
     <Position ref={ref}>
       <Section>
@@ -55,7 +56,9 @@ function Layer() {
           skew={degree}
           color={theme.sky}
           x={-600}
-        ><h1>Hello. WORLD</h1></LayerPart>
+        >
+          <h1>Hello. WORLD</h1>
+        </LayerPart>
         {array.map((item, index) => (
           <LayerPart
             onClick={onClick}
